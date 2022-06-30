@@ -1,0 +1,76 @@
+<div class="tab-pane fade show active px-3 py-3" id="nav-education" role="tabpanel" aria-labelledby="nav-education-tab">
+    <div class="card education education-block">
+        <div class="card-header d-flex">
+            <span class="title">Formación académica</span>
+            <div class="btn-group" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary mr-1" (click)="showNew()"><i class="fa fa-plus"></i> Agregar</button>
+            </div>
+        </div>
+        <div class="card-body pt-0">
+          <div  *ngFor="let item of (this.people.academics ? this.people.academics : []); let i = index;" class="card mt-3">
+            <div  class="card-body item">
+              <div class="title">
+                <div class="title-text">
+                  <span>{{item.job_title}}</span>
+                </div>
+                <div class="btn-group" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-success mr-1" (click)="showEdit(item)"><i class="fa fa-edit"></i></button>
+                  <button type="button" class="btn btn-danger" (click)="quitItemAcademic(i)"><i class="fa fa-trash"></i></button>
+                </div>
+              </div>
+              <div class="institution">
+                <span>{{item.type_area_study.name}}</span>
+              </div>
+              <div class="profession">
+                <span>{{item.type_study!.name}} - {{item.state_study.name}}</span>
+              </div>
+              <div class="period">
+                <span>{{item.start_date}} / {{item.end_date}}, {{item.country}}</span>
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card languaje education-block mt-3">
+      <div class="card-header d-flex">
+        <span class="title">¿Qué idiomas hablas?</span>
+        <div class="btn-group" role="group" aria-label="First group">
+            <button type="button" class="btn btn-primary mr-1" (click)="showNewLanguaje()"><i class="fa fa-plus"></i> Agregar</button>
+        </div>
+      </div>
+      <div class="card-body pt-0">
+        <div *ngFor="let item of (this.people.languajes ? this.people.languajes : []); let i = index;" class="card mt-3">
+          <div  class="card-body item">
+            <div class="title">
+              <div class="title-text">
+                <span>{{item.type_languaje.name}}</span>
+              </div>
+              <div class="btn-group" role="group" aria-label="First group">
+                <button type="button" class="btn btn-success mr-1" (click)="showEditLanguaje(item)"><i class="fa fa-edit"></i></button>
+                <button type="button" class="btn btn-danger" (click)="quitItemLanguaje(i)"><i class="fa fa-trash"></i></button>
+              </div>
+            </div>
+            <div class="description">
+              <span><strong>Escrito: </strong>{{item.write.name}}</span>
+            </div>
+            <div class="description mt-2">
+              <span><strong>Oral: </strong>{{item.oral.name}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card skill education-block mt-3">
+      <div class="card-header d-flex">
+        <span class="title">Conocimientos y habilidades</span>
+        <div class="btn-group" role="group" aria-label="First group">
+            <button type="button" class="btn btn-primary mr-1" (click)="showSkill()"><i class="fa fa-plus"></i> Agregar</button>
+        </div>
+      </div>
+      <div class="card-body pt-0">
+        <span  *ngFor="let item of this.people.skills; let i = index" class="skill-label">{{item}} <i class="fa fa-times close" (click)="quitSkill(i)"></i></span>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="modal-header ">
+    <h4 class="modal-title">{{is_edit ? 'Editar experiencia laboral':'Sumar experiencia laboral'}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="onNewClose(false)"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group mt-2">
+                <label class="mb-1">Descripción de responsabilidades*</label>
+                <textarea [(ngModel)]="this.objetive" class="form-control" id="" cols="30" rows="10">
+
+                </textarea>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer d-flex">
+    <button type="button" class="btn btn-danger" (click)="onNewClose(false)">Cerrar</button>
+    <button type="button" class="btn btn-success" (click)="onNewClose(true)">{{is_edit ? 'Guardar':'Registrar'}}</button>
+  </div>

@@ -1,0 +1,38 @@
+<div class="modal-header ">
+    <h4 class="modal-title">Datos de contacto</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="onNewClose(false)"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Teléfono celular</label>
+                <input type="text" class="form-control" placeholder="Número celular" maxlength="9" [(ngModel)]="this.people!.celular_number">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Otro teléfono</label>
+                <input type="text" class="form-control" placeholder="Número teléfono" [(ngModel)]="this.people!.phone_number">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Correo electrónico</label>
+                <input type="email" class="form-control" placeholder="Correo" [(ngModel)]="this.people!.email">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Dirección</label>
+                <input type="text" class="form-control" placeholder="Región / Provincia / Distrito" [(ngModel)]="this.people!.direction">
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer d-flex">
+    <button type="button" class="btn btn-danger" (click)="onNewClose(false)">Cerrar</button>
+    <button type="button" class="btn btn-success" (click)="onNewClose(true)">Guardar</button>
+  </div>

@@ -1,0 +1,53 @@
+<div class="modal-header">
+    <h4 class="modal-title">Editar idioma</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="onNewClose(false)"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group ">
+                <label class="mb-1">Seleccione Idioma</label>
+                <ng-select 
+                    [(ngModel)]="this.languaje.type_languaje!.id"
+                    [items]="type_languajes"
+                    [placeholder]="'Seleccione idioma'"
+                    bindValue ="id"
+                    bindLabel="name"
+                >	
+                </ng-select>
+            </div>
+            
+        </div>
+        <div class="col-12">
+            <div class="form-group mt-2">
+                <label class="mb-1">Nivel Escrito</label>
+                <ng-select 
+                    [(ngModel)]="this.languaje.write!.id"
+                    [items]="niveles"
+                    [placeholder]="'Seleccione nivel escrito'"
+                    bindValue ="id"
+                    bindLabel="name"
+                >	
+                </ng-select>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group mt-2">
+                <label class="mb-1">Nivel oral *</label>
+                <ng-select 
+                    [(ngModel)]="this.languaje.oral!.id"
+                    [items]="niveles"
+                    [placeholder]="'Seleccione nivel oral'"
+                    bindValue ="id"
+                    bindLabel="name"
+                    [multiple]="true"
+                >	
+                </ng-select>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer d-flex">
+    <button type="button" class="btn btn-danger" (click)="onNewClose(false)">Cerrar</button>
+    <button type="button" class="btn btn-success" (click)="onNewClose(true)">Guardar</button>
+  </div>

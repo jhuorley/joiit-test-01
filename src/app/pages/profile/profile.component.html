@@ -1,0 +1,11 @@
+
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a  class="nav-link " [ngClass]="tabIndex==1 ?'active':''" id="nav-education-tab" data-toggle="tab"  [routerLink]="['education']" role="tab" aria-controls="nav-education" aria-selected="true" (click)="setTabIndex(1)">Educación</a>
+      <a class="nav-link" [ngClass]="tabIndex==2 ?'active':''" id="nav-experience-tab" data-toggle="tab" [routerLink]="['experience']" role="tab" aria-controls="nav-experience" aria-selected="false" (click)="setTabIndex(2)">Experiencia</a>
+      <a class="nav-link" [ngClass]="tabIndex==3 ?'active':''" id="nav-info-tab" data-toggle="tab" [routerLink]="['info']" role="tab" aria-controls="nav-info" aria-selected="false" (click)="setTabIndex(3)">Perfil</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <router-outlet></router-outlet>
+</div>

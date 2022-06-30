@@ -1,0 +1,15 @@
+<div class="personal-contact">
+    <div class="title-container">
+        <span class="title-text">Datos de contacto</span>
+        <button class="btn btn-secondary" (click)="shoeEdit()"><i class="fa fa-edit"></i></button>
+    </div>
+    <div class="description-container">
+        <ul class="description">
+            <li><i class="fa fa-mobile"></i> <span>{{this.people.celular_number ? this.people.celular_number : 'No tiene' }}</span> </li>
+            <li><i class="fa fa-phone"></i> <span>{{this.people.phone_number ? this.people.phone_number : 'No tiene'}}</span></li>
+            <li><i class="fa fa-envelope"></i> <span>{{this.people.email ? this.people.email : 'No tiene'}}</span></li>
+            <li><i class="fa fa-home"></i> <span>{{this.people.direction ? this.people.direction : 'No tienes' }}</span></li>
+        </ul>
+    </div>
+
+</div>

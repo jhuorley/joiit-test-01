@@ -1,0 +1,68 @@
+.experience-block {
+    font-family: 'Public Sans';
+    font-style: normal;
+    .card-header {
+        .title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .btn-group {
+            margin-left: auto;
+        }
+    }
+
+    .card-body {
+        .item {
+            .title {
+                display: flex;
+                width: 100%;;
+                .title-text {
+                    font-size: 18px;
+                    line-height: 24px;
+                    -webkit-box-flex: 1;
+                    flex-grow: 1;
+                    font-weight: 600;
+                    text-align: left;
+                    color: rgb(10, 38, 238);
+                    line-height: 20px;
+                    font-size: 16px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+                .btn-group{
+                    margin-left: auto;
+                }
+            }
+
+            .company {
+                font-weight: 600;
+                line-height: 20px;
+                color: rgba(0, 0, 24, 0.84);
+                font-size: 16px;
+                font-family: 'Public Sans';
+                font-style: normal;
+            }
+
+            .fecha {
+                color: rgba(0, 0, 24, 0.48);
+                line-height: 20px;
+                font-size: 16px;
+                margin-top: 4px;
+                font-family: 'Public Sans';
+                font-style: normal;
+            }
+
+            .descripcion {
+                line-height: 20px;
+                font-size: 16px;
+                color: rgba(0, 0, 24, 0.84);
+                margin-top: 4px;
+                font-family: 'Public Sans';
+                font-style: normal;
+            }
+        }
+    }
+}

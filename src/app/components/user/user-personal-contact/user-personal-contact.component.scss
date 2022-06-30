@@ -1,0 +1,53 @@
+.personal-contact {
+    font-family: 'Public Sans';
+    font-style: normal;
+    .title-container {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid #dfdfdf;
+        padding-bottom: 10px;
+        span {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 600;
+            text-align: left;
+        }
+        button {
+            margin-left: auto;
+
+        }
+    }
+
+    .description-container {
+        width: 100%;
+        padding: 14px 14px 0px 14px;
+        ul {
+            text-decoration: none;
+            list-style: none;
+            padding: 0px;
+
+            li {
+                display: flex;
+                margin-bottom: 14px;
+                span {
+                    font-size: 16px;
+                    line-height: 20px;
+                    width: 100%;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+                i {
+                    color: #636ad9;
+                    font-size: 23px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-right: 10px;
+                    width: 25px;
+                }
+            }
+        }
+    }
+}

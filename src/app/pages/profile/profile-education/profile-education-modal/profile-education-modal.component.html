@@ -1,0 +1,72 @@
+<div class="modal-header">
+    <h4 class="modal-title">Editar estudio</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="onNewClose(false)"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Título/ Carrera</label>
+                <input type="text" class="form-control" placeholder="Título / carrera" [(ngModel)]="this.academic!.job_title">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">País</label>
+                <input type="text" class="form-control" placeholder="Pais" [(ngModel)]="this.academic!.country">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Típo de estudio</label>
+                <select  class="form-control" [(ngModel)]="this.academic.type_study!.id" placeholder="Seleccione tipo">
+                    <option *ngFor="let item of type_studies" [ngValue]="item.id">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Institución *</label>
+                <select  class="form-control" [(ngModel)]="this.academic.type_area_study.id" placeholder="Seleccione tipo">
+                    <option *ngFor="let item of type_area_studies" [ngValue]="item.id">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Referencia</label>
+                <input type="text" class="form-control" placeholder="Institución" [(ngModel)]="this.academic!.institution">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Estado de estudio</label>
+                <select  class="form-control" [(ngModel)]="this.academic.state_study.id" placeholder="Seleccione tipo">
+                    <option *ngFor="let item of state_studies" [ngValue]="item.id">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Fecha de inicio</label>
+                <input type="date" class="form-control" placeholder="Fecha" [(ngModel)]="this.academic.start_date">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Fecha de finalización</label>
+                <input type="date" class="form-control" placeholder="Fecha" [(ngModel)]="this.academic.end_date">
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer d-flex">
+    <button type="button" class="btn btn-danger" (click)="onNewClose(false)">Cerrar</button>
+    <button type="button" class="btn btn-success" (click)="onNewClose(true)">Guardar</button>
+  </div>

@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h4 class="modal-title">Sumar conocimientos y habilidades</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="onNewClose(false)"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+        <div class="col-12">
+            <p>Escribe una palabra simple o compuesta. Ej: Microsoft power point</p>
+            <div class="form-group mt-2">
+                <label class="mb-1">Conocimiento o habilidad*</label>
+                <input type="text" class="form-control" [(ngModel)]="text" (keyup.enter)="addSkill($event)">
+            </div>
+        </div>
+        <div class="col-12 mt-3">
+            <span  *ngFor="let item of skills; let i = index" class="skill-label">{{item}} <i class="fa fa-times close" (click)="quit(i)"></i></span>
+
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer d-flex">
+    <button type="button" class="btn btn-danger" (click)="onNewClose(false)">Cerrar</button>
+    <button [disabled]="this.skills.length == 0" type="button" class="btn btn-success" (click)="onNewClose(true)">Guardar</button>
+  </div>

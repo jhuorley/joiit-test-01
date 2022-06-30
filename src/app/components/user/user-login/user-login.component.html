@@ -1,0 +1,29 @@
+<div class="register-container">
+    <div class="form-container">
+        <div class="title">
+            <h4>Iniciar Sesión</h4>
+            <p>Completa todos los campos requeridos para ingresar al sistema.</p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group mt-2">
+                    <label for="">Correo electrónico</label>
+                    <input type="email" class="form-control" placeholder="Correo electrónico" [(ngModel)]="email">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group mt-2">
+                    <label for="">Contraseña</label>
+                    <input type="password" class="form-control" placeholder="contraseña" [(ngModel)]="password">
+                </div>
+            </div>
+            <div class="col-12 mt-2">
+                <p>Si no tienes una cuenta, puedes registrarte y comenzar a disfrutar de nuestra plataforma. <a [routerLink]="['/home/register']">Registrame</a></p>
+            </div>
+            <div class="col-12 d-flex mt-4">
+                <button class="btn btn-danger"><i class="fa fa-arrow-left"></i> Regresar</button>
+                <button [disabled]="validate()" class="btn btn-success ml-auto" (click)="login()"><i class="fa fa-lock-open"></i> Ingresar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="modal-header ">
+    <h4 class="modal-title">{{is_edit ? 'Editar experiencia laboral':'Sumar experiencia laboral'}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="onNewClose(false)"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Empresa</label>
+                <input type="text" class="form-control" placeholder="Nombre de empresa" [(ngModel)]="this.experience!.company">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Actividad realizada</label>
+                <input type="text" class="form-control" placeholder="Actividad en la empresa" [(ngModel)]="this.experience!.activity">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group mt-2">
+                <label class="mb-1">Puesto de trabajo</label>
+                <input type="text" class="form-control" placeholder="Nombre de puesto" [(ngModel)]="this.experience!.stall">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group mt-2">
+                <label class="mb-1">Nivel de experiencia</label>
+                <ng-select 
+                    [(ngModel)]="this.experience.nivel_experience!.id"
+                    [items]="nivel_experiences"
+                    [placeholder]="'Seleccione nivel experiencia'"
+                    bindValue ="id"
+                    bindLabel="name"
+                >	
+                </ng-select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group mt-2">
+                <label class="mb-1">Fecha de inicio</label>
+                <input type="date" class="form-control" placeholder="Fecha" [(ngModel)]="this.experience.start_date">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group mt-2">
+                <label class="mb-1">Fecha de finalización</label>
+                <input type="date" class="form-control" placeholder="Fecha" [(ngModel)]="this.experience.end_date">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group mt-2">
+                <label class="mb-1">Descripción de responsabilidades*</label>
+                <textarea [(ngModel)]="this.experience.description" class="form-control" id="" cols="30" rows="10">
+
+                </textarea>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer d-flex">
+    <button type="button" class="btn btn-danger" (click)="onNewClose(false)">Cerrar</button>
+    <button type="button" class="btn btn-success" (click)="onNewClose(true)">{{is_edit ? 'Guardar':'Registrar'}}</button>
+  </div>

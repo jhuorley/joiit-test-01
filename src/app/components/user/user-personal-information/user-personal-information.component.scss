@@ -1,0 +1,52 @@
+.personal-information {
+    width: 100%;
+    .image-container {
+        width: 100%;
+        display: flex;
+        position: relative;
+        img {
+            margin-left: auto;
+             margin-right: auto;
+            width: 104px;
+            height: 104px;
+            border-radius: 100px;
+            border: 7px solid #636ad9;
+        }
+        .btnedit {
+            position: absolute;
+            right: 0px;
+        }
+    }
+    .name {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 16px;
+        color: rgb(10, 38, 238);
+        margin-top: 15px;
+    }
+
+    .description-container {
+        display: flex;
+        width: 100%;
+        padding: 4px 0px;
+        .text-left {
+            font-size: 17px;
+            line-height: 20px;
+            color: rgb(0, 0, 24);
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .text-right{
+            margin-left: auto;
+            font-size: 17px;
+            line-height: 20px;
+            color: rgb(0, 0, 24);
+            font-weight: 400;
+            text-align: right;
+        }
+    }
+}

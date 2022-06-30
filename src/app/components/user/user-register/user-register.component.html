@@ -1,0 +1,83 @@
+<div class="register-container">
+    <div class="form-container">
+        <div class="title">
+            <h4>Regístrate</h4>
+            <p>Completa todos los campos requeridos para el registro sea exitoso.</p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="">N° Documento</label>
+                    <input type="text" class="form-control" placeholder="DNI" [(ngModel)]="this.people.document">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group mt-2">
+                    <label for="">Nombre completo</label>
+                    <input type="text" class="form-control" placeholder="Nombre completo" [(ngModel)]="this.people.name">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group mt-2">
+                    <label for="">N° Celular</label>
+                    <input type="text" class="form-control" placeholder="N° Celular" [(ngModel)]="this.people.celular_number">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group mt-2">
+                    <label for="">Seleccione Género</label>
+                    <ng-select 
+                        [(ngModel)]="this.people.gender"
+                        [items]="genders"
+                        [placeholder]="'Seleccione género'"
+                        bindValue ="name"
+                        bindLabel="name"
+                    >
+                </ng-select>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group mt-2">
+                    <label for="">Seleccione Estado Civil</label>
+                    <ng-select 
+                        [(ngModel)]="this.people.marital_status"
+                        [items]="marital_staties"
+                        [placeholder]="'Seleccione estado civil'"
+                        bindValue ="name"
+                        bindLabel="name"
+                    >
+                </ng-select>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group mt-2">
+                    <label for="">Fecha Nacimiento</label>
+                    <input type="date" class="form-control" placeholder="" [(ngModel)]="this.people.birth_date">
+                </div>
+            </div>
+            <div class="col-12">
+                <hr>
+            </div>
+            <div class="col-6">
+                
+                <div class="form-group mt-2">
+                    <label for="">Correo</label>
+                    <input type="email" class="form-control" placeholder="Correo electrónico" [(ngModel)]="this.people.email">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group mt-2">
+                    <label for="">Contraseña</label>
+                    <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="this.people.password">
+                </div>
+            </div>
+            <div class="col-12 mt-2">
+                <p>Si ya tienes una cuenta activa, puedes ir a inicio de sesión para poder acceder. <a [routerLink]="['/home/login']">Iniciar sesión</a></p>
+            </div>
+            <div class="col-12 d-flex mt-4">
+                <button class="btn btn-danger"><i class="fa fa-arrow-left"></i> Regresar</button>
+                <button [disabled]="validate()" class="btn btn-success ml-auto" (click)="register()"><i class="fa fa-plus"></i> Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>

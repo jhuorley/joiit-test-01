@@ -1,0 +1,27 @@
+.container {
+    font-family: 'Public Sans';
+    font-style: normal;
+    margin-top: 70px;
+    .information-container {
+      width: 100%;
+      margin-top: 55px;
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 10px;
+      border: 1px solid #f8f9fa;
+    }
+    .profile-container {
+      width: 100%;
+      margin-top: 55px;
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 10px;
+      border: 1px solid #f8f9fa;
+
+      .tab-content {
+        .tab-pane {
+          //border-left: 1px solid #dee2e6 !important;
+        }
+      }
+    }
+  }

@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/fonts/public-sans/PublicSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url(assets/fonts/public-sans/PublicSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url(assets/fonts/public-sans/PublicSans-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(assets/fonts/public-sans/PublicSans-Bold.ttf) format("truetype");
+}
+
+
+
+
+html,
+body {
+  height: 100%;
+  overflow-y: auto;
+  background: #f8f9fa;
+
+  .navbar {
+    background: #636ad9;
+    color: white;
+    min-height: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    border-bottom: 3px solid #575dc1;
+
+    .navbar-brand {
+      color: white !important;
+    }
+
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: #ffffffbf !important
+        }
+      }
+    }
+  }
+
+
+}

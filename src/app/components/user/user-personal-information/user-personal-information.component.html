@@ -1,0 +1,30 @@
+<div class="personal-information">
+    <div class="image-container">
+        <img [src]="getImg()" alt="">
+        <button class="btn btn-secondary btnedit " (click)="shoeEdit()"><i class="fa fa-edit"></i></button>
+    </div>
+    <div class="name">
+        {{this.people.name}}
+    </div>
+    <div class="description-container">
+        <span class="text-left">Nacionalidad</span>
+        <span class="text-right">{{this.people.nationality}}</span>
+    </div>
+    <div class="description-container">
+        <span class="text-left">Fecha de nacimiento</span>
+        <span class="text-right">{{this.people.birth_date}}</span>
+    </div>
+    <div class="description-container">
+        <span class="text-left">Género</span>
+        <span class="text-right">{{this.people.gender}}</span>
+    </div>
+    <div class="description-container">
+        <span class="text-left">Estado Civil</span>
+        <span class="text-right">{{this.people.marital_status}}</span>
+    </div>
+
+    <div class="description-container">
+        <span class="text-left">N° Documento</span>
+        <span class="text-right">{{this.people.document}}</span>
+    </div>
+</div>

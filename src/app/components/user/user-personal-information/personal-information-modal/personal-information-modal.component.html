@@ -1,0 +1,73 @@
+<div class="modal-header ">
+    <h4 class="modal-title">Datos personales</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="onNewClose(false)"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Nombre completo</label>
+                <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="this.people!.name">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label class="mb-1">Nacionalidad</label>
+                <ng-select 
+                    [(ngModel)]="this.people.nationality"
+                    [items]="nationalities"
+                    [placeholder]="'Seleccione nacionalidad'"
+                    bindValue ="name"
+                    bindLabel="name"
+                >
+                </ng-select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group mt-2">
+                <label class="mb-1">Estado Civil</label>
+                <ng-select 
+                    [(ngModel)]="this.people.marital_status"
+                    [items]="marital_staties"
+                    [placeholder]="'Seleccione estado civil'"
+                    bindValue ="name"
+                    bindLabel="name"
+                >
+                </ng-select>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group mt-2">
+                <label class="mb-1">Género</label>
+                <ng-select 
+                    [(ngModel)]="this.people.gender"
+                    [items]="genders"
+                    [placeholder]="'Seleccione género'"
+                    bindValue ="name"
+                    bindLabel="name"
+                >
+                </ng-select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group mt-2">
+                <label class="mb-1">Número documento</label>
+                <input type="text" class="form-control" placeholder="documento de identidad" [(ngModel)]="this.people.document">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group mt-2">
+                <label class="mb-1">Fecha de nacimiento</label>
+                <input type="date" class="form-control" placeholder="Fecha" [(ngModel)]="this.people.birth_date">
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer d-flex">
+    <button type="button" class="btn btn-danger" (click)="onNewClose(false)">Cerrar</button>
+    <button type="button" class="btn btn-success" (click)="onNewClose(true)">Guardar</button>
+  </div>
